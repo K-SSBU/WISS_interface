@@ -647,7 +647,7 @@ $(document).ready(function() {
 
         // songle 読み込み
         $('#player').html(`
-            <div data-api="songle-widget-extra-module" data-url="${url}" id="songle-widget" data-songle-widget-ctrl="0" data-api-chorus-auto-reload="1" data-song-start-at="chorus"
+            <div data-api="songle-widget-extra-module" data-url="${url}" id="songle-widget" data-songle-widget-ctrl="1" data-api-chorus-auto-reload="1" data-song-start-at="0"
             data-video-player-size-w="${player_weight}" data-video-player-size-h="${video_player_height}" data-songle-widget-size-w="${player_weight}" data-songle-widget-size-h="100"></div>
         `);
         $.getScript("https://widget.songle.jp/v1/widgets.js"); // songle プレイヤーを表示
@@ -796,4 +796,5 @@ $(document).ready(function() {
     });
 
     $('#loading').fadeOut();
+
 });
