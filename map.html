@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>DEMO MAP</title>
+    <title>PrefTolerance</title>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,7 +177,9 @@
         const p = new URLSearchParams(location.search);
         // index 側から ?song_id=...&map_type=umap で来る想定
         window.first_songId = p.get('song_id') || null;
-        window.mapType      = p.get('map_type') || 'umap';
+        window.mapType = p.get('map_type') || 'umap';
+        window.toleranceSetting = p.get('toleranceSetting') || 'Each';
+        window.concatType = p.get('concatType') || 'AllPattern';
       })();
     </script>
 
