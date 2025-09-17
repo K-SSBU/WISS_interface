@@ -45,10 +45,32 @@ $(function () {
     alert('all_song_data.json の読み込みに失敗しました');
   });
 
-  $('#umap').on('click', function () {
+  $('#Pattern1').on('click', function () {
     const songId = $('#id_song').val();
     if (!songId) return alert('楽曲を選択してください');
-    const url = `map.html?song_id=${encodeURIComponent(songId)}&map_type=umap`;
+    const url = `map.html?song_id=${encodeURIComponent(songId)}&map_type=umap&toleranceSetting=Each&concatType=AllPattern`;
     window.location.href = url;
   });
+
+  $('#Pattern2').on('click', function () {
+    const songId = $('#id_song').val();
+    if (!songId) return alert('楽曲を選択してください');
+    const url = `map.html?song_id=${encodeURIComponent(songId)}&map_type=umap&toleranceSetting=All&concatType=AllPattern`;
+    window.location.href = url;
+  });
+
+  $('#Pattern3').on('click', function () {
+    const songId = $('#id_song').val();
+    if (!songId) return alert('楽曲を選択してください');
+    const url = `map.html?song_id=${encodeURIComponent(songId)}&map_type=umap&toleranceSetting=Each&concatType=MaxMin`;
+    window.location.href = url;
+  });
+
+    $('#Pattern4').on('click', function () {
+    const songId = $('#id_song').val();
+    if (!songId) return alert('楽曲を選択してください');
+    const url = `map.html?song_id=${encodeURIComponent(songId)}&map_type=umap&toleranceSetting=All&concatType=MaxMin`;
+    window.location.href = url;
+  });
+
 });
